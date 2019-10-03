@@ -183,7 +183,7 @@ map.on("click", function(e){
 	trailsLayer.eachLayer(function(layer) {
 		layer.setStyle({opacity: 0.75})
 	});
-	selected.setText(null);
+	if (selected!== null) selected.setText(null);
 	
 });
 
