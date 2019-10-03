@@ -2,7 +2,7 @@
 
 /*** Add base maps with controls ***/
 var map = L.map('map', {
-  center: [42.808660, 10.393714],
+  center: [42.808660, 10.37],
   zoom: 13,
   maxZoom: 17,
   minZoom: 11,
@@ -206,7 +206,7 @@ $.getJSON('wgs_trails_elba.geojson', function(json) {
 			gpxLink.href = window.URL.createObjectURL(bb);		
 			gpxLink.download = feature.properties.name + ".gpx";
 			gpxLink.innerHTML = "GPX";			
-			var popupContent = '<h2 class="map-popup">' + feature.properties.name + '</h2></br>' + gpxLink.outerHTML;
+			var popupContent = '<h2 class="map-popup">' + feature.properties.name + '</h2>' + '<div>' + feature.properties.name + '</div>' + gpxLink.outerHTML;
 			layer.bindPopup(popupContent, {closeOnClick: true, className: 'trailPopupClass'});
 							
 		}
