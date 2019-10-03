@@ -5,13 +5,6 @@ var map = L.map('map', {
 
 /*** Add base maps with controls ***/
 var basemaps = {
-    'osm4UMaps': L.tileLayer('//4umaps.eu/{z}/{x}/{y}.png', {
-		maxZoom: 19,
-		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> | <a href="http://4umaps.eu" target="_blank">4UMaps.eu</a>'
-	}),
-	'MTBMap': L.tileLayer('//tile.mtbmap.cz/mtbmap_tiles/{z}/{x}/{y}.png', {
-		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &amp; USGS'
-	}),
 	'Google Hybrid': L.tileLayer('//mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
 		attribution: '&copy; <a href="">Google</a>'
 	})
