@@ -5,7 +5,7 @@ var map = L.map('map', {
 
 /*** Add base maps with controls ***/
 var basemaps = {
-	'Google Hybrid': L.tileLayer('//mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
+	'GoogleHybrid': L.tileLayer('//mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
 		attribution: '&copy; <a href="">Google</a>'
 	})
 };
@@ -17,7 +17,7 @@ var overlays = {
 };
 
 L.control.layers(basemaps, overlays).addTo(map);
-basemaps.MTBMap.addTo(map);
+basemaps.GoogleHybrid.addTo(map);
 
 
 /*** Set up Elevation Control ***/
