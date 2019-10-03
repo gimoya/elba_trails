@@ -1,7 +1,4 @@
-/*** Create map  ***/
-var map = L.map('map', {
-  zoom: 13
-});
+
 
 /*** Add base maps with controls ***/
 var map = L.map('map', {
