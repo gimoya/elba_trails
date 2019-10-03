@@ -4,20 +4,67 @@ var map = L.map('map', {
 });
 
 /*** Add base maps with controls ***/
-var basemaps = {
-	'GoogleHybrid': L.tileLayer('//mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
-		attribution: '&copy; <a href="">Google</a>'
-	})
-};
+var map = L.map('map', {
+  center: [42.808660, 10.393714],
+  zoom: 13,
+  maxZoom: 17,
+  minZoom: 11,
+  zoomControl: false,
+  attributionControl: false
+});
 
-var overlays = {
-	'Wanderwege': L.tileLayer('https://tile.waymarkedtrails.org/slopes/{z}/{x}/{y}.png', {
-		maxZoom: 16, attribution: '&copy; <a href="http://www.waymarkedtrails.org" target="_blank">waymarkedtrails.org</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/de/deed.de" target="_blank">CC BY-SA 3.0 DE</a>'
-	})
-};
+new L.control.attribution({position: 'bottomright'}).addTo(map);
+new L.Control.Zoom({ position: 'topright' }).addTo(map);
 
-L.control.layers(basemaps, overlays).addTo(map);
-basemaps.GoogleHybrid.addTo(map);
+/* 
+Control disabled due to http protocol at the moment.. only https allowed
+
+L.control.locate({
+	strings: {
+		title: "Show me where I am, yo!"
+	}
+
+}).addTo(map);		
+*/
+
+var toggle = L.easyButton({
+  position: 'topright',
+  states: [{
+	stateName: 'basemap-outdoor',
+	icon: '<span class="custom-control">T</span>',
+	title: 'change basemap back to satellite',		
+	onClick: function(control) {
+	  map.removeLayer(mapbox_outdoorLayer);
+	  map.addLayer(mapbox_satelliteLayer);
+	  control.state('basemap-satellite');
+	}
+  }, {
+	stateName: 'basemap-satellite',
+	icon: '<span class="custom-control">S</span>',
+	title: 'change basemap to outdoor/terrain',
+	onClick: function(control) {
+	  map.removeLayer(mapbox_satelliteLayer);
+	  map.addLayer(mapbox_outdoorLayer);
+	  control.state('basemap-outdoor');
+	},
+  }]
+});	
+
+toggle.addTo(map);
+
+var mapbox_Attr = 'Tiles &copy; <a href="https://www.mapbox.com">mapbox</a> | Design &copy; <a href="//tiroltrailhead.com/guiding">Tirol Trailhead</a>';  
+var mapbox_satelliteUrl = 'https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v10/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZ2ltb3lhIiwiYSI6IkZrTld6NmcifQ.eY6Ymt2kVLvPQ6A2Dt9zAQ';
+var mapbox_outdoorUrl = 'https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZ2ltb3lhIiwiYSI6IkZrTld6NmcifQ.eY6Ymt2kVLvPQ6A2Dt9zAQ';
+
+var mapbox_satelliteLayer = L.tileLayer(mapbox_satelliteUrl, {
+  attribution: mapbox_Attr 
+});
+
+var mapbox_outdoorLayer = L.tileLayer(mapbox_outdoorUrl, {
+  attribution: mapbox_Attr 
+});		
+
+mapbox_outdoorLayer.addTo(map);	
 
 
 /*** Set up Elevation Control ***/
