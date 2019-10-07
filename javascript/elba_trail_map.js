@@ -13,17 +13,6 @@ var map = L.map('map', {
 new L.control.attribution({position: 'bottomright'}).addTo(map);
 new L.Control.Zoom({ position: 'topright' }).addTo(map);
 
-// Control (di)sabled due to http protocol at the moment.. only https allowed
-
-L.control.locate({
-	position: 'topright',
-	strings: {
-		title: "Show me where I am, yo!"
-	}
-
-}).addTo(map);		
-
-
 var toggle = L.easyButton({
   position: 'topright',
   states: [{
