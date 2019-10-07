@@ -259,11 +259,3 @@ map.on("click", function(e){
 	
 });
 
-map.on('moveend', function(e){
-	coords.innerHTML='<b> CENTER: </b>' + map.getCenter()
-});
-
-map.on('zoomend', function(e){
-	zoom.innerHTML='<b>ZOOM: </b>' + map.getZoom()
-});
-
