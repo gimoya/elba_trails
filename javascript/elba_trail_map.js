@@ -209,8 +209,9 @@ $.getJSON('wgs_trails_elba.geojson', function(json) {
 			var popupContent = '<h2 class="map-popup">' + feature.properties.name + '</h2>' + '<div>' + feature.properties.description + '</div>' + gpxLink.outerHTML;
 			layer.bindPopup(popupContent, {closeOnClick: true, className: 'trailPopupClass'});
 			
-			console.log(feature.geometry.coordinates[0]);
-			console.log(feature.geometry.coordinates[feature.geometry.coordinates.length - 1]);
+			console.log(
+				L.circleMarker([feature.geometry.coordinates[0][0], feature.geometry.coordinates[0][1]])
+			);
 			
 			/* Add Start and End Markers to each Feature 
 			new L.circleMarker(feature.geometry.coordinates[0], {
