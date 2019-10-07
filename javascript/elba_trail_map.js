@@ -204,7 +204,7 @@ $.getJSON('z_trails_elba.geojson', function(json) {
 					radius: 5,
 					pane: 'ptsPane'
 				})
-				.bindTooltip(feature.properties.name + ' - End (' + feature.geometry.coordinates[0][2] + ' m)', {
+				.bindTooltip(feature.properties.name + ' - Start (' + feature.geometry.coordinates[0][2] + ' m)', {
 					permanent: false, 
 					direction: 'right'
 				})
@@ -217,7 +217,7 @@ $.getJSON('z_trails_elba.geojson', function(json) {
 					radius: 5,
 					pane: 'ptsPane'
 				})	
-				.bindTooltip(feature.properties.name + ' - Start (' + feature.geometry.coordinates[feature.geometry.coordinates.length - 1][2] + ' m)', {
+				.bindTooltip(feature.properties.name + ' - End (' + feature.geometry.coordinates[feature.geometry.coordinates.length - 1][2] + ' m)', {
 					permanent: false, 
 					direction: 'right'
 				})
@@ -247,40 +247,6 @@ $.getJSON('z_trails_elba.geojson', function(json) {
 	}).addTo(map);
 	map.fitBounds(trails_json.getBounds(), {maxZoom: 14});
 });
-
-/*
-trails_json.eachLayer(function(layer){
-
-	var stPt = [ feature.geometry.coordinates[0][1], feature.geometry.coordinates[0][0] ]; // need to flip xy-coords!
-	// var endPt = [ feature.geometry.coordinates[feature.geometry.coordinates.length - 1][0], feature.geometry.coordinates[feature.geometry.coordinates.length - 1][1] ];
-
-	// Add Start and End Markers to each Feature 
-	new L.circleMarker(stPt, {
-			color: 'darkslategrey',
-			fillColor: 'lightgreen',	
-			fillOpacity: 1,				
-			radius: 8
-		})
-		.bindTooltip(feature.properties.name + ' - Start', {
-			permanent: false, 
-			direction: 'right'
-		})
-		.addTo(map);
-	
-	new L.circleMarker([ endPt[1], endPt[0] ], {
-			color: 'darkslategrey',
-			fillColor: 'pink',
-			fillOpacity: 1,
-			radius: 8
-		})	
-		.bindTooltip(feature.properties.name + ' - End', {
-			permanent: false, 
-			direction: 'right'
-		})
-		.addTo(map)	
-	
-});
-*/
 
 /*** Map Event Listeners ***/
 
