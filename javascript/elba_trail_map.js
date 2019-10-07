@@ -181,7 +181,7 @@ function doClickStuff(e) {
 
 /*** Add Trails ***/
 
-$.getJSON('wgs_trails_elba.geojson', function(json) {
+$.getJSON('z_trails_elba.geojson', function(json) {
 	
 	trails_json = L.geoJson(json, {
 		
