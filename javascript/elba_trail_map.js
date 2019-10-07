@@ -190,8 +190,6 @@ $.getJSON('wgs_trails_elba.geojson', function(json) {
 		onEachFeature: function(feature, layer) {
 			
 			console.log(feature.geometry.coordinates[0]);
-			var stPt = [ feature.geometry.coordinates[0][1], feature.geometry.coordinates[0][0] ]; // need to flip xy-coords!
-			new L.circleMarker(stPt).addTo(map);
 			
 			// on events
 			layer.on({		
