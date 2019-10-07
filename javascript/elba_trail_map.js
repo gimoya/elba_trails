@@ -214,6 +214,34 @@ $.getJSON('wgs_trails_elba.geojson', function(json) {
 	map.fitBounds(trailsLayer.getBounds(), {maxZoom: 14});
 });
 
+trailsLayer.eachLayer(function(Layer) {
+
+	new L.circleMarker(latlngs[0], {
+			color: 'darkslategrey',
+			fillColor: 'lightgreen',	
+			fillOpacity: 1,				
+			radius: 8,		
+			pane: 'ptsPane'
+		})
+		.bindTooltip(name + ' - Start', {
+			permanent: false, 
+			direction: 'right'
+		})
+		.addTo(map);
+		
+	new L.circleMarker(latlngs[latlngs.length - 1], {
+			color: 'darkslategrey',
+			fillColor: 'pink',
+			fillOpacity: 1,
+			radius: 8,
+			pane: 'ptsPane'
+		})	
+		.bindTooltip(name + ' - End', {
+			permanent: false, 
+			direction: 'right'
+		})
+		.addTo(map)
+});
 
 /*** Map Event Listeners ***/
 
