@@ -210,7 +210,7 @@ $.getJSON('wgs_trails_elba.geojson', function(json) {
 			layer.bindPopup(popupContent, {closeOnClick: true, className: 'trailPopupClass'});
 			
 			/* Add Start and End Markers to each Feature */
-			new L.circleMarker(feature.properties.coordinates[0], {
+			new L.circleMarker(feature.geometry.coordinates[0], {
 					color: 'darkslategrey',
 					fillColor: 'lightgreen',	
 					fillOpacity: 1,				
@@ -223,7 +223,7 @@ $.getJSON('wgs_trails_elba.geojson', function(json) {
 				})
 				.addTo(map);
 				
-			new L.circleMarker(feature.properties.coordinates.length[feature.properties.coordinates.length - 1], {
+			new L.circleMarker(feature.geometry.coordinates.length[feature.properties.coordinates.length - 1], {
 					color: 'darkslategrey',
 					fillColor: 'pink',
 					fillOpacity: 1,
