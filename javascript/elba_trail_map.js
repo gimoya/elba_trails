@@ -182,11 +182,16 @@ function doClickStuff(e) {
 /*** Add Trails ***/
 
 $.getJSON('wgs_trails_elba.geojson', function(json) {
+	
 	trails_json = L.geoJson(json, {
 		
 		style: 	styleLines,
 		
 		onEachFeature: function(feature, layer) {
+			
+			console.log(feature.geometry.coordinates[0]);
+			var stPt = [ feature.geometry.coordinates[0][1], feature.geometry.coordinates[0][0] ]; // need to flip xy-coords!
+			new L.circleMarker(stPt).addTo(map);
 			
 			// on events
 			layer.on({		
@@ -212,12 +217,10 @@ $.getJSON('wgs_trails_elba.geojson', function(json) {
 	}).addTo(map);
 	map.fitBounds(trails_json.getBounds(), {maxZoom: 14});
 });
-	
+
+/*
 trails_json.eachLayer(function(layer){
-	
-	console.log(layer.geometry.coordinates[0]);
-	
-	/*
+
 	var stPt = [ feature.geometry.coordinates[0][1], feature.geometry.coordinates[0][0] ]; // need to flip xy-coords!
 	// var endPt = [ feature.geometry.coordinates[feature.geometry.coordinates.length - 1][0], feature.geometry.coordinates[feature.geometry.coordinates.length - 1][1] ];
 
