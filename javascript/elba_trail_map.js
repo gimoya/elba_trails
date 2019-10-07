@@ -181,6 +181,10 @@ function doClickStuff(e) {
 
 /*** Add Trails ***/
 
+/* Start/End pts in different pane ontop pf trails */ 
+map.createPane('ptsPane');
+map.getPane('ptsPane').style.zIndex = 600;
+
 $.getJSON('z_trails_elba.geojson', function(json) {
 	
 	trails_json = L.geoJson(json, {
@@ -197,9 +201,10 @@ $.getJSON('z_trails_elba.geojson', function(json) {
 					color: 'darkslategrey',
 					fillColor: 'lightgreen',	
 					fillOpacity: 1,				
-					radius: 8
+					radius: 5,
+					pane: 'ptsPane'
 				})
-				.bindTooltip(feature.properties.name + ' - Start, ' + feature.geometry.coordinates[feature.geometry.coordinates.length - 1][2] + ' m', {
+				.bindTooltip(feature.properties.name + ' - End (' + feature.geometry.coordinates[0][2] + ' m)', {
 					permanent: false, 
 					direction: 'right'
 				})
@@ -209,9 +214,10 @@ $.getJSON('z_trails_elba.geojson', function(json) {
 					color: 'darkslategrey',
 					fillColor: 'pink',
 					fillOpacity: 1,
-					radius: 8
+					radius: 5,
+					pane: 'ptsPane'
 				})	
-				.bindTooltip(feature.properties.name + ' - End, ' + feature.geometry.coordinates[0][2] + ' m', {
+				.bindTooltip(feature.properties.name + ' - Start (' + feature.geometry.coordinates[feature.geometry.coordinates.length - 1][2] + ' m)', {
 					permanent: false, 
 					direction: 'right'
 				})
