@@ -223,7 +223,7 @@ $.getJSON('wgs_trails_elba.geojson', function(json) {
 				})
 				.addTo(map);
 				
-			new L.circleMarker(feature.geometry.coordinates.length[feature.properties.coordinates.length - 1], {
+			new L.circleMarker(feature.geometry.coordinates[feature.geometry.coordinates.length - 1], {
 					color: 'darkslategrey',
 					fillColor: 'pink',
 					fillOpacity: 1,
