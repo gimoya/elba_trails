@@ -208,39 +208,47 @@ $.getJSON('wgs_trails_elba.geojson', function(json) {
 			gpxLink.innerHTML = "GPX";			
 			var popupContent = '<h2 class="map-popup">' + feature.properties.name + '</h2>' + '<div>' + feature.properties.description + '</div>' + gpxLink.outerHTML;
 			layer.bindPopup(popupContent, {closeOnClick: true, className: 'trailPopupClass'});
-			
-			var stPt = [ feature.geometry.coordinates[0][1], feature.geometry.coordinates[0][0] ]; // need to flip xy-coords!
-			// var endPt = [ feature.geometry.coordinates[feature.geometry.coordinates.length - 1][0], feature.geometry.coordinates[feature.geometry.coordinates.length - 1][1] ];
-			
-			// Add Start and End Markers to each Feature 
-			new L.circleMarker(stPt, {
-					color: 'darkslategrey',
-					fillColor: 'lightgreen',	
-					fillOpacity: 1,				
-					radius: 8
-				})
-				.bindTooltip(feature.properties.name + ' - Start', {
-					permanent: false, 
-					direction: 'right'
-				})
-				.addTo(map);
-			/*
-			new L.circleMarker([ endPt[1], endPt[0] ], {
-					color: 'darkslategrey',
-					fillColor: 'pink',
-					fillOpacity: 1,
-					radius: 8
-				})	
-				.bindTooltip(feature.properties.name + ' - End', {
-					permanent: false, 
-					direction: 'right'
-				})
-				.addTo(map)	
-			*/
 		}
 	}).addTo(map);
 	map.fitBounds(trailsLayer.getBounds(), {maxZoom: 14});
 });
+	
+var trails = trailsLayer.getLayers();
+
+for (var trail of trails) {
+	
+	console.log(trail.geometry.coordinates[0]);
+	
+	/*
+	var stPt = [ feature.geometry.coordinates[0][1], feature.geometry.coordinates[0][0] ]; // need to flip xy-coords!
+	// var endPt = [ feature.geometry.coordinates[feature.geometry.coordinates.length - 1][0], feature.geometry.coordinates[feature.geometry.coordinates.length - 1][1] ];
+
+	// Add Start and End Markers to each Feature 
+	new L.circleMarker(stPt, {
+			color: 'darkslategrey',
+			fillColor: 'lightgreen',	
+			fillOpacity: 1,				
+			radius: 8
+		})
+		.bindTooltip(feature.properties.name + ' - Start', {
+			permanent: false, 
+			direction: 'right'
+		})
+		.addTo(map);
+	
+	new L.circleMarker([ endPt[1], endPt[0] ], {
+			color: 'darkslategrey',
+			fillColor: 'pink',
+			fillOpacity: 1,
+			radius: 8
+		})	
+		.bindTooltip(feature.properties.name + ' - End', {
+			permanent: false, 
+			direction: 'right'
+		})
+		.addTo(map)	
+	*/
+}
 
 
 /*** Map Event Listeners ***/
