@@ -212,7 +212,7 @@ $.getJSON('wgs_trails_elba.geojson', function(json) {
 			var stPt = ([feature.geometry.coordinates[0][0], feature.geometry.coordinates[0][1]]);
 			var endPt = ([feature.geometry.coordinates[feature.geometry.coordinates.length - 1][0], feature.geometry.coordinates[feature.geometry.coordinates.length - 1][1]]);
 			
-			Add Start and End Markers to each Feature 
+			// Add Start and End Markers to each Feature 
 			new L.circleMarker(fstPt, {
 					color: 'darkslategrey',
 					fillColor: 'lightgreen',	
