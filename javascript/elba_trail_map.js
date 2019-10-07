@@ -189,7 +189,33 @@ $.getJSON('z_trails_elba.geojson', function(json) {
 		
 		onEachFeature: function(feature, layer) {
 			
-			console.log(feature.geometry.coordinates[0]);
+			var stPt = [ feature.geometry.coordinates[0][1], feature.geometry.coordinates[0][0],  ]; // need to flip xy-coords!
+			var endPt = [ feature.geometry.coordinates[feature.geometry.coordinates.length - 1][1], feature.geometry.coordinates[feature.geometry.coordinates.length - 1][0] ];
+			
+			// Add Start and End Markers to each Feature 
+			new L.circleMarker(stPt, {
+					color: 'darkslategrey',
+					fillColor: 'lightgreen',	
+					fillOpacity: 1,				
+					radius: 8
+				})
+				.bindTooltip(feature.properties.name + ' - Start, ' + feature.geometry.coordinates[feature.geometry.coordinates.length - 1][2] + ' m', {
+					permanent: false, 
+					direction: 'right'
+				})
+				.addTo(map);
+			
+			new L.circleMarker(endPt, {
+					color: 'darkslategrey',
+					fillColor: 'pink',
+					fillOpacity: 1,
+					radius: 8
+				})	
+				.bindTooltip(feature.properties.name + ' - End, ' + feature.geometry.coordinates[0][2] + ' m', {
+					permanent: false, 
+					direction: 'right'
+				})
+				.addTo(map)	
 			
 			// on events
 			layer.on({		
