@@ -182,7 +182,7 @@ function doClickStuff(e) {
 /*** Add Trails ***/
 
 $.getJSON('wgs_trails_elba.geojson', function(json) {
-	trailsLayer = L.geoJson(json, {
+	trails_json = L.geoJson(json, {
 		
 		style: 	styleLines,
 		
@@ -210,14 +210,12 @@ $.getJSON('wgs_trails_elba.geojson', function(json) {
 			layer.bindPopup(popupContent, {closeOnClick: true, className: 'trailPopupClass'});
 		}
 	}).addTo(map);
-	map.fitBounds(trailsLayer.getBounds(), {maxZoom: 14});
+	map.fitBounds(trails_json.getBounds(), {maxZoom: 14});
 });
 	
-var trails = trailsLayer.getLayers();
-
-for (var trail of trails) {
+trails_json.eachLayer(function(layer){
 	
-	console.log(trail.geometry.coordinates[0]);
+	console.log(layer.geometry.coordinates[0]);
 	
 	/*
 	var stPt = [ feature.geometry.coordinates[0][1], feature.geometry.coordinates[0][0] ]; // need to flip xy-coords!
@@ -248,7 +246,7 @@ for (var trail of trails) {
 		})
 		.addTo(map)	
 	*/
-}
+});
 
 
 /*** Map Event Listeners ***/
@@ -260,7 +258,7 @@ map.on("click", function(e){
 		map.removeControl(el);
 	};	
 	/*** reset opaque trails, reset direction arrows ***/
-	trailsLayer.eachLayer(function(layer) {
+	trails_json.eachLayer(function(layer) {
 		layer.setStyle({opacity: 0.75})
 	});
 	if (selected!== null) selected.setText(null);
