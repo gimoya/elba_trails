@@ -127,13 +127,13 @@ function styleLines(feature) {	// deafult style used for constructor of json
 			
 var lyr;
 var ftr;
-var trailsLayer;
+var trails_json;
 
 var selected = null;
 
 function dehighlight (layer) { 	// will be used inside select function
   if (selected === null || selected._leaflet_id !== layer._leaflet_id) {
-	  trailsLayer.resetStyle(layer);
+	  trails_json.resetStyle(layer);
 	  layer.setText(null);
   }
 }
@@ -171,7 +171,7 @@ function doClickStuff(e) {
 	
 	/*** make all non-selected trails opaque, after resetting styles (ftr selected before)***/ 
 	
-	trailsLayer.eachLayer(function(layer){ if(selected._leaflet_id !== layer._leaflet_id) {
+	trails_json.eachLayer(function(layer){ if(selected._leaflet_id !== layer._leaflet_id) {
 		dehighlight(layer);
 		layer.setStyle({opacity: 0.4})
 		}
