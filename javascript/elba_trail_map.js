@@ -5,7 +5,7 @@ var map = L.map('map', {
   center: [42.808660, 10.375],
   zoom: 12,
   maxZoom: 17,
-  minZoom: 11,
+  minZoom: 9,
   zoomControl: false,
   attributionControl: false
 });
@@ -16,6 +16,7 @@ new L.Control.Zoom({ position: 'topright' }).addTo(map);
 // Control (di)sabled due to http protocol at the moment.. only https allowed
 
 L.control.locate({
+	position: 'topright',
 	strings: {
 		title: "Show me where I am, yo!"
 	}
