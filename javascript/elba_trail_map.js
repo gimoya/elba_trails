@@ -2,8 +2,8 @@
 
 /*** Add base maps with controls ***/
 var map = L.map('map', {
-  center: [42.808660, 10.37],
-  zoom: 13,
+  center: [42.808660, 10.375],
+  zoom: 12,
   maxZoom: 17,
   minZoom: 11,
   zoomControl: false,
@@ -210,27 +210,27 @@ $.getJSON('wgs_trails_elba.geojson', function(json) {
 			layer.bindPopup(popupContent, {closeOnClick: true, className: 'trailPopupClass'});
 			
 			/* Add Start and End Markers to each Feature */
-			new L.circleMarker(latlngs[0], {
+			new L.circleMarker(_latlngs[0], {
 					color: 'darkslategrey',
 					fillColor: 'lightgreen',	
 					fillOpacity: 1,				
 					radius: 8,		
 					pane: 'ptsPane'
 				})
-				.bindTooltip(name + ' - Start', {
+				.bindTooltip(feature.properties.name + ' - Start', {
 					permanent: false, 
 					direction: 'right'
 				})
 				.addTo(map);
 				
-			new L.circleMarker(latlngs[latlngs.length - 1], {
+			new L.circleMarker(_latlngs[_latlngs.length - 1], {
 					color: 'darkslategrey',
 					fillColor: 'pink',
 					fillOpacity: 1,
 					radius: 8,
 					pane: 'ptsPane'
 				})	
-				.bindTooltip(name + ' - End', {
+				.bindTooltip(feature.properties.name + ' - End', {
 					permanent: false, 
 					direction: 'right'
 				})
