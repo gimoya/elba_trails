@@ -248,9 +248,9 @@ trails_json.eachLayer(function(layer){
 			direction: 'right'
 		})
 		.addTo(map)	
-	*/
+	
 });
-
+*/
 
 /*** Map Event Listeners ***/
 
