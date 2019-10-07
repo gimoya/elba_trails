@@ -222,10 +222,6 @@ $.getJSON('wgs_trails_elba.geojson', function(json) {
 					radius: 8,		
 					pane: 'ptsPane'
 				})
-				.bindTooltip(feature.properties.name + ' - Start', {
-					permanent: false, 
-					direction: 'right'
-				})
 				.addTo(map);
 				
 			new L.circleMarker([ endPt[1], endPt[0] ], {
