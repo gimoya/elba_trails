@@ -214,13 +214,19 @@ $.getJSON('wgs_trails_elba.geojson', function(json) {
 			
 			L.circleMarker([ endPt[1], endPt[0] ]).addTo(map);
 			
+			map.createPane('ptsPane');
+		    map.getPane('ptsPane').style.zIndex = 599
+			
 			// Add Start and End Markers to each Feature 
 			new L.circleMarker([ stPt[1], stPt[0] ], {
 					color: 'darkslategrey',
 					fillColor: 'lightgreen',	
 					fillOpacity: 1,				
-					radius: 8,		
-					pane: 'ptsPane'
+					radius: 8
+				})
+				.bindTooltip(feature.properties.name + ' - Start', {
+					permanent: false, 
+					direction: 'right'
 				})
 				.addTo(map);
 				
@@ -228,8 +234,7 @@ $.getJSON('wgs_trails_elba.geojson', function(json) {
 					color: 'darkslategrey',
 					fillColor: 'pink',
 					fillOpacity: 1,
-					radius: 8,
-					pane: 'ptsPane'
+					radius: 8
 				})	
 				.bindTooltip(feature.properties.name + ' - End', {
 					permanent: false, 
