@@ -174,7 +174,7 @@ function doClickStuff(e) {
 map.createPane('ptsPane');
 map.getPane('ptsPane').style.zIndex = 600;
 
-$.getJSON('trails_elba.geojson', function(json) {
+$.getJSON('z_trails_elba.geojson', function(json) {
 	
 	trails_json = L.geoJson(json, {
 		
