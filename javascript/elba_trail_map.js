@@ -85,8 +85,8 @@ mapbox_outdoorLayer.addTo(map);
 var el = L.control.elevation({
 			position: "bottomright",
 			theme: "lime-theme", //default: lime-theme
-			width: 500,	
-			height: 200,
+			width: 300,	
+			height: 135,
 			margins: {
 				top: 20,
 				right: 20,
