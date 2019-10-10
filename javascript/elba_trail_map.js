@@ -304,14 +304,15 @@ var POIs = {
 
 var POIs_Icon = L.icon({
 	iconUrl: 'https://gimoya.github.io/elba_trails/images/marker.svg',
-	iconSize: [15, 24], // size of the icon
+	iconSize: [16, 28], // size of the icon
 	});
 
 for (i = 0; i < POIs.features.length; i++) { 
 	new L.marker(L.GeoJSON.coordsToLatLng(POIs.features[i].geometry.coordinates), {
 				icon: POIs_Icon,
 				zIndexOffset: 10000,
-				riseOnHover: true})
+				riseOnHover: true,
+				pane: 'ptsPane'})
 			.bindPopup('<h2>'+POIs.features[i].properties.name+'</h2>'+POIs.features[i].properties.description, 
 				{
 					closeButton: true,
