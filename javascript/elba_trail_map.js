@@ -311,7 +311,7 @@ var POIs = {
 }
 
 var POIs_Icon = L.icon({
-	iconUrl: 'elba_trails/images/marker.svg',
+	iconUrl: '/images/marker.svg',
 	iconSize: [30, 46], // size of the icon
 	});
 
