@@ -1,3 +1,32 @@
+/* PW protection */
+function trim(str) {
+	return str.replace(/^\s+|\s+$/g, '');  
+}
+
+var pw_prompt = prompt('Bitte Passwort eingeben (Anfrage per E-Mail an: kay@tiroltrailhead.com), um auf die **ELBA TRAIL MAP** zu gelangen..',' ');
+var pw = 'gimmegimme';
+// if prompt is cancelled the pw_prompt var will be null!
+if (pw_prompt == null) {
+	alert('Kein Passwort wurde angegeben, **ELBA TRAIL MAP** wird nicht geladen...');
+	if (bowser.msie) {
+		document.execCommand('Stop');
+	} else {
+		window.stop();
+	}
+	window.location='http://tiroltrailhead.com/guiding';
+}
+if (trim(pw_prompt) == pw ) {
+	alert('Passwort richtig!');
+} else {
+	alert('Falsches Passwort, **ELBA TRAIL MAP** wird nicht geladen..');
+	if (bowser.msie) {
+		document.execCommand('Stop');
+	} else {
+		window.stop();
+	}
+	window.location='http://tiroltrailhead.com/guiding';
+}
+
 
 /*** Add base maps with controls ***/
 var map = L.map('map', {
@@ -245,30 +274,30 @@ var POIs = {
 	"name": "POIs",
 	"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 	"features": [
-		{ "type": "Feature", "properties": { "name": "Calendozio Minen", "description": "<a href=\"https://google.com\/maps\/search\/Calendozio Minen\">Goolge Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.433195000778694, 42.846563435712767 ] } },
-		{ "type": "Feature", "properties": { "name": "Bar & Crepes 'I Sassirossi'", "description": "<a href=\"https://google.com\/maps\/search\/Bar & Crepes 'I Sassirossi'\">Goolge Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.421687105111864, 42.859251223462977 ] } },
-		{ "type": "Feature", "properties": { "name": "Bar & Ristorante 'La Piazza'", "description": "<a href=\"https://google.com\/maps\/search\/Bar & Ristorante 'La Piazza'\">Goolge Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.401553011790016, 42.813766757348091 ] } },
-		{ "type": "Feature", "properties": { "name": "Aloe B & B Ranch Elba", "description": "<a href=\"https://google.com\/maps\/search\/Aloe B & B Ranch Elba\">Goolge Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.408682377036765, 42.811250255377345 ] } },
-		{ "type": "Feature", "properties": { "name": "PP 'Le Panche'", "description": "<a href=\"https://google.com\/maps\/search\/PP 'Le Panche'\">Goolge Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.393229679804257, 42.808642183011926 ] } },
-		{ "type": "Feature", "properties": { "name": "Ristorante Mare - Magazzini", "description": "<a href=\"https://google.com\/maps\/search\/Ristorante Mare - Magazzini\">Goolge Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.358303702245937, 42.799840744001706 ] } },
-		{ "type": "Feature", "properties": { "name": "Bar Ristorante Le Palme - Bagnaia", "description": "<a href=\"https://google.com\/maps\/search\/Bar Ristorante Le Palme - Bagnaia\">Goolge Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.36372817884163, 42.810643588703883 ] } },
-		{ "type": "Feature", "properties": { "name": "Bar & Stabilimento Mandel", "description": "<a href=\"https://google.com\/maps\/search\/Bar & Stabilimento Mandel\">Goolge Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.372453924676392, 42.732403377493846 ] } },
-		{ "type": "Feature", "properties": { "name": "Minimarkt Lacona & Bankomat", "description": "<a href=\"https://google.com\/maps\/search\/Minimarkt Lacona & Bankomat\">Goolge Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.313554269928702, 42.765188059048825 ] } },
-		{ "type": "Feature", "properties": { "name": "'Tratoria Orti di Mare'", "description": "<a href=\"https://google.com\/maps\/search\/'Tratoria Orti di Mare'\">Goolge Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.309327836357474, 42.764830547047488 ] } },
-		{ "type": "Feature", "properties": { "name": "Ristorante Cacio & Vino", "description": "<a href=\"https://google.com\/maps\/search\/Ristorante Cacio & Vino\">Goolge Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.211601766564495, 42.751601080030852 ] } },
+		{ "type": "Feature", "properties": { "name": "Calendozio Minen", "description": "<a href=\"https://google.com\/maps\/search\/Calendozio Minen\"target=\"_blank\">Google Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.433195000778694, 42.846563435712767 ] } },
+		{ "type": "Feature", "properties": { "name": "Bar & Crepes 'I Sassirossi'", "description": "<a href=\"https://google.com\/maps\/search\/Bar & Crepes 'I Sassirossi'\"target=\"_blank\">Google Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.421687105111864, 42.859251223462977 ] } },
+		{ "type": "Feature", "properties": { "name": "Bar & Ristorante 'La Piazza'", "description": "<a href=\"https://google.com\/maps\/search\/Bar & Ristorante 'La Piazza'\"target=\"_blank\">Google Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.401553011790016, 42.813766757348091 ] } },
+		{ "type": "Feature", "properties": { "name": "Aloe B & B Ranch Elba", "description": "<a href=\"https://google.com\/maps\/search\/Aloe B & B Ranch Elba\"target=\"_blank\">Google Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.408682377036765, 42.811250255377345 ] } },
+		{ "type": "Feature", "properties": { "name": "PP 'Le Panche'", "description": "<a href=\"https://google.com\/maps\/search\/PP 'Le Panche'\"target=\"_blank\">Google Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.393229679804257, 42.808642183011926 ] } },
+		{ "type": "Feature", "properties": { "name": "Ristorante Mare - Magazzini", "description": "<a href=\"https://google.com\/maps\/search\/Ristorante Mare - Magazzini\"target=\"_blank\">Google Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.358303702245937, 42.799840744001706 ] } },
+		{ "type": "Feature", "properties": { "name": "Bar Ristorante Le Palme - Bagnaia", "description": "<a href=\"https://google.com\/maps\/search\/Bar Ristorante Le Palme - Bagnaia\"target=\"_blank\">Google Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.36372817884163, 42.810643588703883 ] } },
+		{ "type": "Feature", "properties": { "name": "Bar & Stabilimento Mandel", "description": "<a href=\"https://google.com\/maps\/search\/Bar & Stabilimento Mandel\"target=\"_blank\">Google Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.372453924676392, 42.732403377493846 ] } },
+		{ "type": "Feature", "properties": { "name": "Minimarkt Lacona & Bankomat", "description": "<a href=\"https://google.com\/maps\/search\/Minimarkt Lacona & Bankomat\"target=\"_blank\">Google Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.313554269928702, 42.765188059048825 ] } },
+		{ "type": "Feature", "properties": { "name": "'Tratoria Orti di Mare'", "description": "<a href=\"https://google.com\/maps\/search\/'Tratoria Orti di Mare'\"target=\"_blank\">Google Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.309327836357474, 42.764830547047488 ] } },
+		{ "type": "Feature", "properties": { "name": "Ristorante Cacio & Vino", "description": "<a href=\"https://google.com\/maps\/search\/Ristorante Cacio & Vino\"target=\"_blank\">Google Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.211601766564495, 42.751601080030852 ] } },
 		{ "type": "Feature", "properties": { "name": "Bar Spiaggia Cavolli", "description": null }, "geometry": { "type": "Point", "coordinates": [ 10.186399316735942, 42.73738496151384 ] } },
-		{ "type": "Feature", "properties": { "name": "Minimarkt Seccheto", "description": "<a href=\"https://google.com\/maps\/search\/Minimarkt Seccheto\">Goolge Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.176845708130028, 42.73769072758364 ] } },
-		{ "type": "Feature", "properties": { "name": "Panificcio Seccheto", "description": "<a href=\"https://google.com\/maps\/search\/Panificcio Seccheto\">Goolge Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.177415675024058, 42.737597700262853 ] } },
-		{ "type": "Feature", "properties": { "name": "Baba Pizza Pomonte", "description": "<a href=\"https://google.com\/maps\/search\/Baba Pizza Pomonte\">Goolge Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.1208601, 42.7486187 ] } },
-		{ "type": "Feature", "properties": { "name": "Mini Market Pomonte", "description": "<a href=\"https://google.com\/maps\/search\/Mini Market Pomonte\">Goolge Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.121819933812914, 42.748386473414676 ] } },
-		{ "type": "Feature", "properties": { "name": "Hotel & Bar Il Perseo Chiessi", "description": "<a href=\"https://google.com\/maps\/search\/Hotel & Bar Il Perseo Chiessi\">Goolge Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.113424194143604, 42.759005039240684 ] } },
-		{ "type": "Feature", "properties": { "name": "Hotel & Bar Bel Mare Patresi \/ Bike Guide Matteo Anselmi", "description": "<a href=\"https://google.com\/maps\/search\/Hotel & Bar Bel Mare Patresi \/ Bike Guide Matteo Anselmi\">Goolge Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.117820207820397, 42.791279815618402 ] } },
-		{ "type": "Feature", "properties": { "name": "Osteria Del Noce", "description": "<a href=\"https://google.com\/maps\/search\/Osteria Del Noce\">Goolge Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.167205994929112, 42.790316468951815 ] } },
-		{ "type": "Feature", "properties": { "name": "Pizzeria & Bar Bagni Paola Procchio", "description": "<a href=\"https://google.com\/maps\/search\/Pizzeria & Bar Bagni Paola Procchio\">Goolge Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.247504370542897, 42.789433590132184 ] } },
-		{ "type": "Feature", "properties": { "name": "Osteria Locanda Cecconi Porto Azzurro", "description": "<a href=\"https://google.com\/maps\/search\/Osteria Locanda Cecconi Porto Azzurro\">Goolge Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.398243648910684, 42.765950601670468 ] } },
-		{ "type": "Feature", "properties": { "name": "Pizzeria Da Giuseppe", "description": "<a href=\"https://google.com\/maps\/search\/Pizzeria Da Giuseppe\">Goolge Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.395422349335403, 42.765225325040845 ] } },
-		{ "type": "Feature", "properties": { "name": "Bar Alta Luna Porto Azzurro", "description": "<a href=\"https://google.com\/maps\/search\/Bar Alta Luna Porto Azzurro\">Goolge Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.398409293393327, 42.765735721919597 ] } },
-		{ "type": "Feature", "properties": { "name": "Il Veliero Bar Marina di Campo", "description": "<a href=\"https://google.com\/maps\/search\/Il Veliero Bar Marina di Campo\">Goolge Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.236144660833816, 42.742844995518332 ] } }
+		{ "type": "Feature", "properties": { "name": "Minimarkt Seccheto", "description": "<a href=\"https://google.com\/maps\/search\/Minimarkt Seccheto\"target=\"_blank\">Google Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.176845708130028, 42.73769072758364 ] } },
+		{ "type": "Feature", "properties": { "name": "Panificcio Seccheto", "description": "<a href=\"https://google.com\/maps\/search\/Panificcio Seccheto\"target=\"_blank\">Google Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.177415675024058, 42.737597700262853 ] } },
+		{ "type": "Feature", "properties": { "name": "Baba Pizza Pomonte", "description": "<a href=\"https://google.com\/maps\/search\/Baba Pizza Pomonte\"target=\"_blank\">Google Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.1208601, 42.7486187 ] } },
+		{ "type": "Feature", "properties": { "name": "Mini Market Pomonte", "description": "<a href=\"https://google.com\/maps\/search\/Mini Market Pomonte\"target=\"_blank\">Google Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.121819933812914, 42.748386473414676 ] } },
+		{ "type": "Feature", "properties": { "name": "Hotel & Bar Il Perseo Chiessi", "description": "<a href=\"https://google.com\/maps\/search\/Hotel & Bar Il Perseo Chiessi\"target=\"_blank\">Google Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.113424194143604, 42.759005039240684 ] } },
+		{ "type": "Feature", "properties": { "name": "Hotel & Bar Bel Mare Patresi \/ Bike Guide Matteo Anselmi", "description": "<a href=\"https://google.com\/maps\/search\/Hotel & Bar Bel Mare Patresi \/ Bike Guide Matteo Anselmi\"target=\"_blank\">Google Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.117820207820397, 42.791279815618402 ] } },
+		{ "type": "Feature", "properties": { "name": "Osteria Del Noce", "description": "<a href=\"https://google.com\/maps\/search\/Osteria Del Noce\"target=\"_blank\">Google Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.167205994929112, 42.790316468951815 ] } },
+		{ "type": "Feature", "properties": { "name": "Pizzeria & Bar Bagni Paola Procchio", "description": "<a href=\"https://google.com\/maps\/search\/Pizzeria & Bar Bagni Paola Procchio\"target=\"_blank\">Google Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.247504370542897, 42.789433590132184 ] } },
+		{ "type": "Feature", "properties": { "name": "Osteria Locanda Cecconi Porto Azzurro", "description": "<a href=\"https://google.com\/maps\/search\/Osteria Locanda Cecconi Porto Azzurro\"target=\"_blank\">Google Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.398243648910684, 42.765950601670468 ] } },
+		{ "type": "Feature", "properties": { "name": "Pizzeria Da Giuseppe", "description": "<a href=\"https://google.com\/maps\/search\/Pizzeria Da Giuseppe\"target=\"_blank\">Google Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.395422349335403, 42.765225325040845 ] } },
+		{ "type": "Feature", "properties": { "name": "Bar Alta Luna Porto Azzurro", "description": "<a href=\"https://google.com\/maps\/search\/Bar Alta Luna Porto Azzurro\"target=\"_blank\">Google Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.398409293393327, 42.765735721919597 ] } },
+		{ "type": "Feature", "properties": { "name": "Il Veliero Bar Marina di Campo", "description": "<a href=\"https://google.com\/maps\/search\/Il Veliero Bar Marina di Campo\"target=\"_blank\">Google Maps Search<\/a>" }, "geometry": { "type": "Point", "coordinates": [ 10.236144660833816, 42.742844995518332 ] } }
 	]
 }
 
@@ -279,12 +308,17 @@ var POIs_Icon = L.icon({
 	});
 
 for (i = 0; i < POIs.features.length; i++) { 
-	new L.marker(L.GeoJSON.coordsToLatLng(POIs.features[i].geometry.coordinates), {icon: POIs_Icon})
+	new L.marker(L.GeoJSON.coordsToLatLng(POIs.features[i].geometry.coordinates), {
+				icon: POIs_Icon,
+				zIndexOffset: 1000,
+				riseOnHover: true})
 			.bindPopup('<h2>'+POIs.features[i].properties.name+'</h2>'+POIs.features[i].properties.description, 
 				{
 					closeButton: true,
 					autoClose: false,
-					direction: 'right'
+					direction: 'right',
+					min-width: 60px,
+					max-width: 200px
 				}
 			)
 			.addTo(map);
