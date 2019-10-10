@@ -311,12 +311,14 @@ var POIs = {
 }
 
 var POIs_Icon = L.icon({
-	iconUrl: 'images/marker.svg',
+	iconUrl: 'gimoya.github.io/elba_trails/images/marker.svg',
 	iconSize: [30, 46], // size of the icon
 	});
 
 for (i = 0; i < POIs.features.length; i++) { 
-	new L.marker(POIs.features[1].geometry.coordinates, {icon: POIs_Icon})
+	new L.marker(POIs.features[1].geometry.coordinates, {
+			icon: POIs_Icon;
+			pane: 'ptsPane'})
 		.bindTooltip(POIs.features[1].properties.name, 
 			{
 				permanent: false, 
