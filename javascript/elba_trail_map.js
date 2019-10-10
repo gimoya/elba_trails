@@ -268,33 +268,6 @@ $.getJSON('z_trails_elba.geojson', function(json) {
 Points of interest
 */
 
-/* used icons for markers:
-L.AwesomeMarkers.Icon.prototype.options.prefix = 'fa';
-  
-var POIS_Icon = L.AwesomeMarkers.icon({
-		icon: 'fa-truck',
-		markerColor: 'cadetblue',
-		iconColor: 'yellow'
-	  })
-*/
-
-
-$.getJSON('./data/dtr_points.geojson', function (data) {
-    // Assign the results to the geojsonData variable
-    dtr_points = L.geoJson(data, {
-      //inital css style of grid
-      style: function(feature){
-        return {
-          color: "#000000",
-          weight: 0.25,
-          opacity: 0.5,
-          fillOpacity: 10
-        };
-      }
-    }).addTo(map);
-});´
-
-
 var POIs = {
 	"type": "FeatureCollection",
 	"name": "POIs",
