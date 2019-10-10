@@ -268,7 +268,7 @@ $.getJSON('trails_elba.geojson', function(json) {
 Points of interest
 */
 
-// used icons for markers:
+/* used icons for markers:
 L.AwesomeMarkers.Icon.prototype.options.prefix = 'fa';
   
 var POIS_Icon = L.AwesomeMarkers.icon({
@@ -276,6 +276,7 @@ var POIS_Icon = L.AwesomeMarkers.icon({
 		markerColor: 'cadetblue',
 		iconColor: 'yellow'
 	  })
+*/
 	  
 var POIs = {
 	"type": "FeatureCollection",
@@ -310,7 +311,7 @@ var POIs = {
 }
 
 for (i = 0; i < POIs.features.length; i++) { 
-	new L.marker(POIs.features[1].geometry.coordinates, {icon: POIs_icon})
+	new L.marker(POIs.features[1].geometry.coordinates)
 		.bindTooltip(POIs.features[1].properties.name, 
 			{
 				permanent: false, 
