@@ -1,31 +1,3 @@
-/* PW protection */	
-function trim(str) {
-	return str.replace(/^\s+|\s+$/g, '');  
-}
-
-var pw_prompt = prompt('Bitte Passwort eingeben (Anfrage per E-Mail an: kay@tiroltrailhead.com), um auf die **ELBA TRAIL MAP** zu gelangen..',' ');
-var pw = 'gimmegimme';
-// if prompt is cancelled the pw_prompt var will be null!
-if (pw_prompt == null) {
-	alert('Kein Passwort wurde angegeben, **ELBA TRAIL MAP** wird nicht geladen...');
-	if (bowser.msie) {
-		document.execCommand('Stop');
-	} else {
-		window.stop();
-	}
-	window.location='http://tiroltrailhead.com/guiding';
-}
-if (trim(pw_prompt) == pw ) {
-	alert('Passwort richtig!');
-} else {
-	alert('Falsches Passwort, **ELBA TRAIL MAP** wird nicht geladen..');
-	if (bowser.msie) {
-		document.execCommand('Stop');
-	} else {
-		window.stop();
-	}
-	window.location='http://tiroltrailhead.com/guiding';
-}
 
 /*** Add base maps with controls ***/
 var map = L.map('map', {
@@ -308,11 +280,7 @@ var POIs_Icon = L.icon({
 */
 
 for (i = 0; i < POIs.features.length; i++) { 
-	new L.marker(POIs.features[i].geometry.coordinates, 
-				{
-					//icon: POIs_Icon
-				}
-			)
+	new L.marker( POIs.features[i].geometry.coordinates )
 			.bindTooltip('<h2>'+POIs.features[i].properties.name+'</h2>'+POIs.features[i].properties.description, 
 				{
 					permanent: false, 
