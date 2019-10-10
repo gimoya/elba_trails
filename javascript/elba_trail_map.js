@@ -277,7 +277,24 @@ var POIS_Icon = L.AwesomeMarkers.icon({
 		iconColor: 'yellow'
 	  })
 */
-	  
+
+
+$.getJSON('./data/dtr_points.geojson', function (data) {
+    // Assign the results to the geojsonData variable
+    dtr_points = L.geoJson(data, {
+      //inital css style of grid
+      style: function(feature){
+        return {
+          color: "#000000",
+          weight: 0.25,
+          opacity: 0.5,
+          fillOpacity: 10
+        };
+      }
+    }).addTo(map);
+});´
+
+
 var POIs = {
 	"type": "FeatureCollection",
 	"name": "POIs",
@@ -310,23 +327,27 @@ var POIs = {
 	]
 }
 
+/*
 var POIs_Icon = L.icon({
 	iconUrl: 'https://gimoya.github.io/elba_trails/images/marker.svg',
 	iconSize: [30, 46], // size of the icon
 	});
+*/
 
 for (i = 0; i < POIs.features.length; i++) { 
-	new L.marker(POIs.features[1].geometry.coordinates, {
-			icon: POIs_Icon,
-			pane: 'ptsPane'})
-		.bindTooltip(POIs.features[1].properties.name, 
-			{
-				permanent: false, 
-				direction: 'right'
-			}
-		)
-		.addTo(map);
-}
+	new L.marker(POIs.features[i].geometry.coordinates, 
+				{
+					//icon: POIs_Icon
+				}
+			)
+			.bindTooltip('<h2>'+POIs.features[i].properties.name+'</h2>'+POIs.features[i].properties.description, 
+				{
+					permanent: false, 
+					direction: 'right'
+				}
+			)
+			.addTo(map);
+	}
 
 /*** Map Event Listeners ***/
 
