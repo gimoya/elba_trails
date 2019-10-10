@@ -316,9 +316,7 @@ for (i = 0; i < POIs.features.length; i++) {
 				{
 					closeButton: true,
 					autoClose: false,
-					direction: 'right',
-					min-width: 60,
-					max-width: 200
+					direction: 'right'
 				}
 			)
 			.addTo(map);
