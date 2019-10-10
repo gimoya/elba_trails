@@ -310,7 +310,7 @@ var POIs_Icon = L.icon({
 for (i = 0; i < POIs.features.length; i++) { 
 	new L.marker(L.GeoJSON.coordsToLatLng(POIs.features[i].geometry.coordinates), {
 				icon: POIs_Icon,
-				zIndexOffset: 1000,
+				zIndexOffset: 10000,
 				riseOnHover: true})
 			.bindPopup('<h2>'+POIs.features[i].properties.name+'</h2>'+POIs.features[i].properties.description, 
 				{
