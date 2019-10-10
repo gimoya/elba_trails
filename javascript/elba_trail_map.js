@@ -317,8 +317,8 @@ for (i = 0; i < POIs.features.length; i++) {
 					closeButton: true,
 					autoClose: false,
 					direction: 'right',
-					min-width: 60px,
-					max-width: 200px
+					min-width: 60,
+					max-width: 200
 				}
 			)
 			.addTo(map);
