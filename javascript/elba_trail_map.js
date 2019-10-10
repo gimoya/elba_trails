@@ -317,7 +317,7 @@ var POIs_Icon = L.icon({
 
 for (i = 0; i < POIs.features.length; i++) { 
 	new L.marker(POIs.features[1].geometry.coordinates, {
-			icon: POIs_Icon;
+			icon: POIs_Icon,
 			pane: 'ptsPane'})
 		.bindTooltip(POIs.features[1].properties.name, 
 			{
