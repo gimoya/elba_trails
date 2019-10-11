@@ -114,7 +114,7 @@ L.control.locate({
     strings: {
         title: "Show me my location!"
     },
-	position: 'top-right'
+	position: 'topright'
 }).addTo(map);	
 		
 /*** Trail Style-Helper Functions ***/
