@@ -184,10 +184,7 @@
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-layer source="LineStringZ?crs=EPSG:4326&amp;field=name:string(0,0)&amp;field=description:string(0,0)&amp;field=WKT:string(0,0)&amp;uid={0ade4560-94ac-416e-9836-8e53528120cf}" expanded="1" providerKey="memory" id="Updated_c5fd73e0_06b9_408a_bc22_38fd77714fc2" name="Updated" checked="Qt::Checked">
-      <customproperties/>
-    </layer-tree-layer>
-    <layer-tree-layer source="./z_trails_elba.geojson|layername=z_trails_elba" expanded="1" providerKey="ogr" id="Updated_8414f7a0_41ea_4f8a_b2c9_98c7c2358aad" name="z_trails_elba" checked="Qt::Checked">
+    <layer-tree-layer source="./z_trails_elba.geojson|layername=z_trails_elba" expanded="1" providerKey="ogr" id="Updated_c5fd73e0_06b9_408a_bc22_38fd77714fc2" name="trails" checked="Qt::Checked">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer source="./kmls/merged_routes.shp" expanded="0" providerKey="ogr" id="merged_routes_0b178502_1f3b_4578_aa07_fa67eec7e250" name="Merged Layer" checked="Qt::Unchecked">
@@ -266,7 +263,6 @@
       <item>trincerone_Tracks_f6ff9340_63ab_45f1_8db6_86c8bc4ebc6d</item>
       <item>sierra_del_literno_Tracks_1b997f9c_e4cc_4ad3_bcd0_97c8245c18bb</item>
       <item>Updated_b7031ae0_80f6_44fe_a08e_c271074183cb</item>
-      <item>Updated_8414f7a0_41ea_4f8a_b2c9_98c7c2358aad</item>
       <item>POIs_b8a8ba28_1ffd_41bb_8715_1f5c19a767ae</item>
       <item>LeCime_c4a7059c_3df3_49a3_92df_4d5c20c0e1c3</item>
       <item>Salinen_36f729aa_f94d_41d6_9a5f_b1a5350cd22e</item>
@@ -294,7 +290,6 @@
       <layer-setting tolerance="12" type="1" id="Keegan_27e3d634_d5ad_4618_b72c_fc9ce3103aae" enabled="0" units="1"/>
       <layer-setting tolerance="12" type="1" id="T13_Mt_Tambone_Tre_Golfi_Capo_Stella_d77b6a8b_4e45_4888_9be0_808fc2e46bd5" enabled="0" units="1"/>
       <layer-setting tolerance="12" type="1" id="Tag_41_80d5b826_eb41_4630_9b6f_64266801ca7c" enabled="0" units="1"/>
-      <layer-setting tolerance="12" type="1" id="Updated_8414f7a0_41ea_4f8a_b2c9_98c7c2358aad" enabled="0" units="1"/>
       <layer-setting tolerance="12" type="1" id="Salinen_36f729aa_f94d_41d6_9a5f_b1a5350cd22e" enabled="0" units="1"/>
       <layer-setting tolerance="12" type="1" id="Capoliveri_Legend_Cup_2019_676c492a_836f_4497_86e8_2f706e9f5a79" enabled="0" units="1"/>
       <layer-setting tolerance="12" type="1" id="Napoleone_DH_9492b6b3_7cc2_4121_a6ea_d07dd244a15f" enabled="0" units="1"/>
@@ -634,14 +629,9 @@
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendlayer showFeatureCount="0" drawingOrder="-1" open="true" name="Updated" checked="Qt::Checked">
+    <legendlayer showFeatureCount="0" drawingOrder="-1" open="true" name="trails" checked="Qt::Checked">
       <filegroup open="true" hidden="false">
         <legendlayerfile visible="1" isInOverview="0" layerid="Updated_c5fd73e0_06b9_408a_bc22_38fd77714fc2"/>
-      </filegroup>
-    </legendlayer>
-    <legendlayer showFeatureCount="0" drawingOrder="-1" open="true" name="z_trails_elba" checked="Qt::Checked">
-      <filegroup open="true" hidden="false">
-        <legendlayerfile visible="1" isInOverview="0" layerid="Updated_8414f7a0_41ea_4f8a_b2c9_98c7c2358aad"/>
       </filegroup>
     </legendlayer>
     <legendlayer showFeatureCount="0" drawingOrder="-1" open="false" name="Merged Layer" checked="Qt::Unchecked">
@@ -13117,392 +13107,6 @@ def my_form_open(dialog, layer, feature):
       <previewExpression></previewExpression>
       <mapTip></mapTip>
     </maplayer>
-    <maplayer type="vector" simplifyAlgorithm="0" autoRefreshTime="0" autoRefreshEnabled="0" simplifyDrawingHints="1" minScale="1e+08" maxScale="0" simplifyDrawingTol="1" hasScaleBasedVisibilityFlag="0" refreshOnNotifyMessage="" simplifyMaxScale="1" styleCategories="AllStyleCategories" refreshOnNotifyEnabled="0" readOnly="0" wkbType="LineString" labelsEnabled="0" simplifyLocal="1" geometry="Line">
-      <extent>
-        <xmin>10.10740200000000044</xmin>
-        <ymin>42.71173100000000034</ymin>
-        <xmax>10.43498669999999962</xmax>
-        <ymax>42.85432080000000354</ymax>
-      </extent>
-      <id>Updated_8414f7a0_41ea_4f8a_b2c9_98c7c2358aad</id>
-      <datasource>./z_trails_elba.geojson|layername=z_trails_elba</datasource>
-      <keywordList>
-        <value></value>
-      </keywordList>
-      <layername>z_trails_elba</layername>
-      <srs>
-        <spatialrefsys>
-          <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
-          <srsid>3452</srsid>
-          <srid>4326</srid>
-          <authid>EPSG:4326</authid>
-          <description>WGS 84</description>
-          <projectionacronym>longlat</projectionacronym>
-          <ellipsoidacronym>WGS84</ellipsoidacronym>
-          <geographicflag>true</geographicflag>
-        </spatialrefsys>
-      </srs>
-      <resourceMetadata>
-        <identifier></identifier>
-        <parentidentifier></parentidentifier>
-        <language></language>
-        <type>dataset</type>
-        <title></title>
-        <abstract></abstract>
-        <links/>
-        <fees></fees>
-        <encoding></encoding>
-        <crs>
-          <spatialrefsys>
-            <proj4></proj4>
-            <srsid>0</srsid>
-            <srid>0</srid>
-            <authid></authid>
-            <description></description>
-            <projectionacronym></projectionacronym>
-            <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>true</geographicflag>
-          </spatialrefsys>
-        </crs>
-        <extent/>
-      </resourceMetadata>
-      <provider encoding="UTF-8">ogr</provider>
-      <vectorjoins/>
-      <layerDependencies/>
-      <dataDependencies/>
-      <legend type="default-vector"/>
-      <expressionfields>
-        <field expression="left(geom_to_wkt($geometry), 55) || '...' || right(geom_to_wkt($geometry), 55)" length="0" precision="0" comment="" type="10" typeName="string" name="WKT" subType="0"/>
-      </expressionfields>
-      <map-layer-style-manager current="default">
-        <map-layer-style name="default"/>
-      </map-layer-style-manager>
-      <auxiliaryLayer/>
-      <flags>
-        <Identifiable>1</Identifiable>
-        <Removable>1</Removable>
-        <Searchable>1</Searchable>
-      </flags>
-      <renderer-v2 enableorderby="0" type="singleSymbol" symbollevels="0" forceraster="0">
-        <symbols>
-          <symbol clip_to_extent="1" type="line" name="0" force_rhr="0" alpha="1">
-            <layer class="SimpleLine" pass="0" enabled="1" locked="0">
-              <prop v="square" k="capstyle"/>
-              <prop v="5;2" k="customdash"/>
-              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-              <prop v="MM" k="customdash_unit"/>
-              <prop v="0" k="draw_inside_polygon"/>
-              <prop v="bevel" k="joinstyle"/>
-              <prop v="245,5,245,152" k="line_color"/>
-              <prop v="solid" k="line_style"/>
-              <prop v="0.8" k="line_width"/>
-              <prop v="MM" k="line_width_unit"/>
-              <prop v="0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="0" k="ring_filter"/>
-              <prop v="0" k="use_custom_dash"/>
-              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option type="QString" value="" name="name"/>
-                  <Option name="properties"/>
-                  <Option type="QString" value="collection" name="type"/>
-                </Option>
-              </data_defined_properties>
-            </layer>
-            <layer class="MarkerLine" pass="0" enabled="1" locked="0">
-              <prop v="4" k="average_angle_length"/>
-              <prop v="3x:0,0,0,0,0,0" k="average_angle_map_unit_scale"/>
-              <prop v="MM" k="average_angle_unit"/>
-              <prop v="30" k="interval"/>
-              <prop v="3x:0,0,0,0,0,0" k="interval_map_unit_scale"/>
-              <prop v="MM" k="interval_unit"/>
-              <prop v="0" k="offset"/>
-              <prop v="0" k="offset_along_line"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_along_line_map_unit_scale"/>
-              <prop v="MM" k="offset_along_line_unit"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="interval" k="placement"/>
-              <prop v="0" k="ring_filter"/>
-              <prop v="1" k="rotate"/>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option type="QString" value="" name="name"/>
-                  <Option name="properties"/>
-                  <Option type="QString" value="collection" name="type"/>
-                </Option>
-              </data_defined_properties>
-              <symbol clip_to_extent="1" type="marker" name="@0@1" force_rhr="0" alpha="1">
-                <layer class="SimpleMarker" pass="0" enabled="1" locked="0">
-                  <prop v="0" k="angle"/>
-                  <prop v="244,245,245,255" k="color"/>
-                  <prop v="1" k="horizontal_anchor_point"/>
-                  <prop v="bevel" k="joinstyle"/>
-                  <prop v="arrowhead" k="name"/>
-                  <prop v="0,0" k="offset"/>
-                  <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-                  <prop v="MM" k="offset_unit"/>
-                  <prop v="245,5,245,152" k="outline_color"/>
-                  <prop v="solid" k="outline_style"/>
-                  <prop v="0.5" k="outline_width"/>
-                  <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-                  <prop v="MM" k="outline_width_unit"/>
-                  <prop v="area" k="scale_method"/>
-                  <prop v="3.5" k="size"/>
-                  <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-                  <prop v="MM" k="size_unit"/>
-                  <prop v="1" k="vertical_anchor_point"/>
-                  <data_defined_properties>
-                    <Option type="Map">
-                      <Option type="QString" value="" name="name"/>
-                      <Option name="properties"/>
-                      <Option type="QString" value="collection" name="type"/>
-                    </Option>
-                  </data_defined_properties>
-                </layer>
-              </symbol>
-            </layer>
-            <layer class="MarkerLine" pass="0" enabled="1" locked="0">
-              <prop v="4" k="average_angle_length"/>
-              <prop v="3x:0,0,0,0,0,0" k="average_angle_map_unit_scale"/>
-              <prop v="MM" k="average_angle_unit"/>
-              <prop v="3" k="interval"/>
-              <prop v="3x:0,0,0,0,0,0" k="interval_map_unit_scale"/>
-              <prop v="MM" k="interval_unit"/>
-              <prop v="0" k="offset"/>
-              <prop v="0" k="offset_along_line"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_along_line_map_unit_scale"/>
-              <prop v="MM" k="offset_along_line_unit"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="firstvertex" k="placement"/>
-              <prop v="0" k="ring_filter"/>
-              <prop v="1" k="rotate"/>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option type="QString" value="" name="name"/>
-                  <Option name="properties"/>
-                  <Option type="QString" value="collection" name="type"/>
-                </Option>
-              </data_defined_properties>
-              <symbol clip_to_extent="1" type="marker" name="@0@2" force_rhr="0" alpha="1">
-                <layer class="SimpleMarker" pass="0" enabled="1" locked="0">
-                  <prop v="0" k="angle"/>
-                  <prop v="0,255,55,255" k="color"/>
-                  <prop v="1" k="horizontal_anchor_point"/>
-                  <prop v="bevel" k="joinstyle"/>
-                  <prop v="circle" k="name"/>
-                  <prop v="0,0" k="offset"/>
-                  <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-                  <prop v="MM" k="offset_unit"/>
-                  <prop v="0,0,0,255" k="outline_color"/>
-                  <prop v="solid" k="outline_style"/>
-                  <prop v="0" k="outline_width"/>
-                  <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-                  <prop v="MM" k="outline_width_unit"/>
-                  <prop v="diameter" k="scale_method"/>
-                  <prop v="3" k="size"/>
-                  <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-                  <prop v="MM" k="size_unit"/>
-                  <prop v="1" k="vertical_anchor_point"/>
-                  <data_defined_properties>
-                    <Option type="Map">
-                      <Option type="QString" value="" name="name"/>
-                      <Option name="properties"/>
-                      <Option type="QString" value="collection" name="type"/>
-                    </Option>
-                  </data_defined_properties>
-                </layer>
-              </symbol>
-            </layer>
-            <layer class="MarkerLine" pass="0" enabled="1" locked="0">
-              <prop v="4" k="average_angle_length"/>
-              <prop v="3x:0,0,0,0,0,0" k="average_angle_map_unit_scale"/>
-              <prop v="MM" k="average_angle_unit"/>
-              <prop v="3" k="interval"/>
-              <prop v="3x:0,0,0,0,0,0" k="interval_map_unit_scale"/>
-              <prop v="MM" k="interval_unit"/>
-              <prop v="0" k="offset"/>
-              <prop v="0" k="offset_along_line"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_along_line_map_unit_scale"/>
-              <prop v="MM" k="offset_along_line_unit"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="lastvertex" k="placement"/>
-              <prop v="0" k="ring_filter"/>
-              <prop v="1" k="rotate"/>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option type="QString" value="" name="name"/>
-                  <Option name="properties"/>
-                  <Option type="QString" value="collection" name="type"/>
-                </Option>
-              </data_defined_properties>
-              <symbol clip_to_extent="1" type="marker" name="@0@3" force_rhr="0" alpha="1">
-                <layer class="SimpleMarker" pass="0" enabled="1" locked="0">
-                  <prop v="0" k="angle"/>
-                  <prop v="255,0,0,255" k="color"/>
-                  <prop v="1" k="horizontal_anchor_point"/>
-                  <prop v="bevel" k="joinstyle"/>
-                  <prop v="circle" k="name"/>
-                  <prop v="0,0" k="offset"/>
-                  <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-                  <prop v="MM" k="offset_unit"/>
-                  <prop v="0,0,0,255" k="outline_color"/>
-                  <prop v="solid" k="outline_style"/>
-                  <prop v="0" k="outline_width"/>
-                  <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-                  <prop v="MM" k="outline_width_unit"/>
-                  <prop v="diameter" k="scale_method"/>
-                  <prop v="3" k="size"/>
-                  <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-                  <prop v="MM" k="size_unit"/>
-                  <prop v="1" k="vertical_anchor_point"/>
-                  <data_defined_properties>
-                    <Option type="Map">
-                      <Option type="QString" value="" name="name"/>
-                      <Option name="properties"/>
-                      <Option type="QString" value="collection" name="type"/>
-                    </Option>
-                  </data_defined_properties>
-                </layer>
-              </symbol>
-            </layer>
-          </symbol>
-        </symbols>
-        <rotation/>
-        <sizescale/>
-      </renderer-v2>
-      <customproperties>
-        <property key="dualview/previewExpressions">
-          <value>'[Please define preview text]'</value>
-        </property>
-        <property key="embeddedWidgets/count" value="0"/>
-        <property key="variableNames"/>
-        <property key="variableValues"/>
-      </customproperties>
-      <blendMode>0</blendMode>
-      <featureBlendMode>0</featureBlendMode>
-      <layerOpacity>1</layerOpacity>
-      <SingleCategoryDiagramRenderer attributeLegend="1" diagramType="Histogram">
-        <DiagramCategory lineSizeType="MM" diagramOrientation="Up" penAlpha="255" rotationOffset="270" backgroundColor="#ffffff" barWidth="5" backgroundAlpha="255" penColor="#000000" lineSizeScale="3x:0,0,0,0,0,0" enabled="0" sizeType="MM" penWidth="0" maxScaleDenominator="1e+08" minScaleDenominator="0" scaleDependency="Area" minimumSize="0" height="15" opacity="1" scaleBasedVisibility="0" width="15" labelPlacementMethod="XHeight" sizeScale="3x:0,0,0,0,0,0">
-          <fontProperties style="" description="MS Shell Dlg 2,7.8,-1,5,50,0,0,0,0,0"/>
-          <attribute field="" color="#000000" label=""/>
-        </DiagramCategory>
-      </SingleCategoryDiagramRenderer>
-      <DiagramLayerSettings zIndex="0" obstacle="0" dist="0" linePlacementFlags="18" placement="2" showAll="1" priority="0">
-        <properties>
-          <Option type="Map">
-            <Option type="QString" value="" name="name"/>
-            <Option name="properties"/>
-            <Option type="QString" value="collection" name="type"/>
-          </Option>
-        </properties>
-      </DiagramLayerSettings>
-      <geometryOptions geometryPrecision="0" removeDuplicateNodes="0">
-        <activeChecks/>
-        <checkConfiguration/>
-      </geometryOptions>
-      <fieldConfiguration>
-        <field name="name">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="description">
-          <editWidget type="TextEdit">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="WKT">
-          <editWidget type="">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-      </fieldConfiguration>
-      <aliases>
-        <alias field="name" name="" index="0"/>
-        <alias field="description" name="" index="1"/>
-        <alias field="WKT" name="" index="2"/>
-      </aliases>
-      <excludeAttributesWMS/>
-      <excludeAttributesWFS/>
-      <defaults>
-        <default expression="" field="name" applyOnUpdate="0"/>
-        <default expression="" field="description" applyOnUpdate="0"/>
-        <default expression="" field="WKT" applyOnUpdate="0"/>
-      </defaults>
-      <constraints>
-        <constraint constraints="0" field="name" exp_strength="0" notnull_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="description" exp_strength="0" notnull_strength="0" unique_strength="0"/>
-        <constraint constraints="0" field="WKT" exp_strength="0" notnull_strength="0" unique_strength="0"/>
-      </constraints>
-      <constraintExpressions>
-        <constraint exp="" desc="" field="name"/>
-        <constraint exp="" desc="" field="description"/>
-        <constraint exp="" desc="" field="WKT"/>
-      </constraintExpressions>
-      <expressionfields>
-        <field expression="left(geom_to_wkt($geometry), 55) || '...' || right(geom_to_wkt($geometry), 55)" length="0" precision="0" comment="" type="10" typeName="string" name="WKT" subType="0"/>
-      </expressionfields>
-      <attributeactions>
-        <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
-      </attributeactions>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="&quot;WKT&quot;" sortOrder="0">
-        <columns>
-          <column width="-1" type="actions" hidden="1"/>
-          <column width="601" type="field" hidden="0" name="name"/>
-          <column width="392" type="field" hidden="0" name="description"/>
-          <column width="581" type="field" hidden="0" name="WKT"/>
-        </columns>
-      </attributetableconfig>
-      <conditionalstyles>
-        <rowstyles/>
-        <fieldstyles/>
-      </conditionalstyles>
-      <editform tolerant="1"></editform>
-      <editforminit/>
-      <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
-      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
-"""
-QGIS forms can have a Python function that is called when the form is
-opened.
-
-Use this function to add extra logic to your forms.
-
-Enter the name of the function in the "Python Init function"
-field.
-An example follows:
-"""
-from qgis.PyQt.QtWidgets import QWidget
-
-def my_form_open(dialog, layer, feature):
-	geom = feature.geometry()
-	control = dialog.findChild(QWidget, "MyLineEdit")
-]]></editforminitcode>
-      <featformsuppress>0</featformsuppress>
-      <editorlayout>generatedlayout</editorlayout>
-      <editable>
-        <field editable="1" name="description"/>
-        <field editable="1" name="name"/>
-      </editable>
-      <labelOnTop>
-        <field labelOnTop="0" name="description"/>
-        <field labelOnTop="0" name="name"/>
-      </labelOnTop>
-      <widgets/>
-      <previewExpression>'[Please define preview text]'</previewExpression>
-      <mapTip></mapTip>
-    </maplayer>
     <maplayer type="vector" simplifyAlgorithm="0" autoRefreshTime="0" autoRefreshEnabled="0" simplifyDrawingHints="1" minScale="1e+08" maxScale="0" simplifyDrawingTol="1" hasScaleBasedVisibilityFlag="0" refreshOnNotifyMessage="" simplifyMaxScale="1" styleCategories="AllStyleCategories" refreshOnNotifyEnabled="0" readOnly="0" wkbType="LineStringZ" labelsEnabled="0" simplifyLocal="1" geometry="Line">
       <extent>
         <xmin>10.10434239999999306</xmin>
@@ -15185,7 +14789,7 @@ def my_form_open(dialog, layer, feature):
       <previewExpression>name</previewExpression>
       <mapTip></mapTip>
     </maplayer>
-    <maplayer type="vector" simplifyAlgorithm="0" autoRefreshTime="0" autoRefreshEnabled="0" simplifyDrawingHints="1" minScale="1e+08" maxScale="0" simplifyDrawingTol="1" hasScaleBasedVisibilityFlag="0" refreshOnNotifyMessage="" simplifyMaxScale="1" styleCategories="AllStyleCategories" refreshOnNotifyEnabled="0" readOnly="0" wkbType="LineStringZ" labelsEnabled="0" simplifyLocal="1" geometry="Line">
+    <maplayer type="vector" simplifyAlgorithm="0" autoRefreshTime="0" autoRefreshEnabled="0" simplifyDrawingHints="1" minScale="1e+08" maxScale="0" simplifyDrawingTol="1" hasScaleBasedVisibilityFlag="0" refreshOnNotifyMessage="" simplifyMaxScale="1" styleCategories="AllStyleCategories" refreshOnNotifyEnabled="0" readOnly="0" wkbType="LineString" labelsEnabled="0" simplifyLocal="1" geometry="Line">
       <extent>
         <xmin>10.10740200000000044</xmin>
         <ymin>42.71173100000000034</ymin>
@@ -15193,11 +14797,11 @@ def my_form_open(dialog, layer, feature):
         <ymax>42.85432080000000354</ymax>
       </extent>
       <id>Updated_c5fd73e0_06b9_408a_bc22_38fd77714fc2</id>
-      <datasource>memory?geometry=LineStringZ&amp;crs=EPSG:4326&amp;field=name:string(0,0)&amp;field=description:string(0,0)&amp;field=WKT:string(0,0)</datasource>
+      <datasource>./z_trails_elba.geojson|layername=z_trails_elba</datasource>
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>Updated</layername>
+      <layername>trails</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
@@ -15214,7 +14818,7 @@ def my_form_open(dialog, layer, feature):
         <identifier></identifier>
         <parentidentifier></parentidentifier>
         <language></language>
-        <type></type>
+        <type>dataset</type>
         <title></title>
         <abstract></abstract>
         <links/>
@@ -15234,12 +14838,14 @@ def my_form_open(dialog, layer, feature):
         </crs>
         <extent/>
       </resourceMetadata>
-      <provider encoding="UTF-8">memory</provider>
+      <provider encoding="UTF-8">ogr</provider>
       <vectorjoins/>
       <layerDependencies/>
       <dataDependencies/>
       <legend type="default-vector"/>
-      <expressionfields/>
+      <expressionfields>
+        <field expression="left(geom_to_wkt($geometry), 55) || '...' || right(geom_to_wkt($geometry), 55)" length="0" precision="0" comment="" type="10" typeName="string" name="WKT" subType="0"/>
+      </expressionfields>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
       </map-layer-style-manager>
@@ -15259,9 +14865,9 @@ def my_form_open(dialog, layer, feature):
               <prop v="MM" k="customdash_unit"/>
               <prop v="0" k="draw_inside_polygon"/>
               <prop v="bevel" k="joinstyle"/>
-              <prop v="196,60,57,255" k="line_color"/>
+              <prop v="245,5,245,152" k="line_color"/>
               <prop v="solid" k="line_style"/>
-              <prop v="0.26" k="line_width"/>
+              <prop v="0.8" k="line_width"/>
               <prop v="MM" k="line_width_unit"/>
               <prop v="0" k="offset"/>
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
@@ -15277,35 +14883,208 @@ def my_form_open(dialog, layer, feature):
                 </Option>
               </data_defined_properties>
             </layer>
+            <layer class="MarkerLine" pass="0" enabled="1" locked="0">
+              <prop v="4" k="average_angle_length"/>
+              <prop v="3x:0,0,0,0,0,0" k="average_angle_map_unit_scale"/>
+              <prop v="MM" k="average_angle_unit"/>
+              <prop v="30" k="interval"/>
+              <prop v="3x:0,0,0,0,0,0" k="interval_map_unit_scale"/>
+              <prop v="MM" k="interval_unit"/>
+              <prop v="0" k="offset"/>
+              <prop v="0" k="offset_along_line"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_along_line_map_unit_scale"/>
+              <prop v="MM" k="offset_along_line_unit"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="interval" k="placement"/>
+              <prop v="0" k="ring_filter"/>
+              <prop v="1" k="rotate"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option name="properties"/>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
+              <symbol clip_to_extent="1" type="marker" name="@0@1" force_rhr="0" alpha="1">
+                <layer class="SimpleMarker" pass="0" enabled="1" locked="0">
+                  <prop v="0" k="angle"/>
+                  <prop v="244,245,245,255" k="color"/>
+                  <prop v="1" k="horizontal_anchor_point"/>
+                  <prop v="bevel" k="joinstyle"/>
+                  <prop v="arrowhead" k="name"/>
+                  <prop v="0,0" k="offset"/>
+                  <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+                  <prop v="MM" k="offset_unit"/>
+                  <prop v="245,5,245,152" k="outline_color"/>
+                  <prop v="solid" k="outline_style"/>
+                  <prop v="0.5" k="outline_width"/>
+                  <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
+                  <prop v="MM" k="outline_width_unit"/>
+                  <prop v="area" k="scale_method"/>
+                  <prop v="3.5" k="size"/>
+                  <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
+                  <prop v="MM" k="size_unit"/>
+                  <prop v="1" k="vertical_anchor_point"/>
+                  <data_defined_properties>
+                    <Option type="Map">
+                      <Option type="QString" value="" name="name"/>
+                      <Option name="properties"/>
+                      <Option type="QString" value="collection" name="type"/>
+                    </Option>
+                  </data_defined_properties>
+                </layer>
+              </symbol>
+            </layer>
+            <layer class="MarkerLine" pass="0" enabled="1" locked="0">
+              <prop v="4" k="average_angle_length"/>
+              <prop v="3x:0,0,0,0,0,0" k="average_angle_map_unit_scale"/>
+              <prop v="MM" k="average_angle_unit"/>
+              <prop v="3" k="interval"/>
+              <prop v="3x:0,0,0,0,0,0" k="interval_map_unit_scale"/>
+              <prop v="MM" k="interval_unit"/>
+              <prop v="0" k="offset"/>
+              <prop v="0" k="offset_along_line"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_along_line_map_unit_scale"/>
+              <prop v="MM" k="offset_along_line_unit"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="firstvertex" k="placement"/>
+              <prop v="0" k="ring_filter"/>
+              <prop v="1" k="rotate"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option name="properties"/>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
+              <symbol clip_to_extent="1" type="marker" name="@0@2" force_rhr="0" alpha="1">
+                <layer class="SimpleMarker" pass="0" enabled="1" locked="0">
+                  <prop v="0" k="angle"/>
+                  <prop v="0,255,55,255" k="color"/>
+                  <prop v="1" k="horizontal_anchor_point"/>
+                  <prop v="bevel" k="joinstyle"/>
+                  <prop v="circle" k="name"/>
+                  <prop v="0,0" k="offset"/>
+                  <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+                  <prop v="MM" k="offset_unit"/>
+                  <prop v="0,0,0,255" k="outline_color"/>
+                  <prop v="solid" k="outline_style"/>
+                  <prop v="0" k="outline_width"/>
+                  <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
+                  <prop v="MM" k="outline_width_unit"/>
+                  <prop v="diameter" k="scale_method"/>
+                  <prop v="3" k="size"/>
+                  <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
+                  <prop v="MM" k="size_unit"/>
+                  <prop v="1" k="vertical_anchor_point"/>
+                  <data_defined_properties>
+                    <Option type="Map">
+                      <Option type="QString" value="" name="name"/>
+                      <Option name="properties"/>
+                      <Option type="QString" value="collection" name="type"/>
+                    </Option>
+                  </data_defined_properties>
+                </layer>
+              </symbol>
+            </layer>
+            <layer class="MarkerLine" pass="0" enabled="1" locked="0">
+              <prop v="4" k="average_angle_length"/>
+              <prop v="3x:0,0,0,0,0,0" k="average_angle_map_unit_scale"/>
+              <prop v="MM" k="average_angle_unit"/>
+              <prop v="3" k="interval"/>
+              <prop v="3x:0,0,0,0,0,0" k="interval_map_unit_scale"/>
+              <prop v="MM" k="interval_unit"/>
+              <prop v="0" k="offset"/>
+              <prop v="0" k="offset_along_line"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_along_line_map_unit_scale"/>
+              <prop v="MM" k="offset_along_line_unit"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="lastvertex" k="placement"/>
+              <prop v="0" k="ring_filter"/>
+              <prop v="1" k="rotate"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option name="properties"/>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
+              <symbol clip_to_extent="1" type="marker" name="@0@3" force_rhr="0" alpha="1">
+                <layer class="SimpleMarker" pass="0" enabled="1" locked="0">
+                  <prop v="0" k="angle"/>
+                  <prop v="255,0,0,255" k="color"/>
+                  <prop v="1" k="horizontal_anchor_point"/>
+                  <prop v="bevel" k="joinstyle"/>
+                  <prop v="circle" k="name"/>
+                  <prop v="0,0" k="offset"/>
+                  <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+                  <prop v="MM" k="offset_unit"/>
+                  <prop v="0,0,0,255" k="outline_color"/>
+                  <prop v="solid" k="outline_style"/>
+                  <prop v="0" k="outline_width"/>
+                  <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
+                  <prop v="MM" k="outline_width_unit"/>
+                  <prop v="diameter" k="scale_method"/>
+                  <prop v="3" k="size"/>
+                  <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
+                  <prop v="MM" k="size_unit"/>
+                  <prop v="1" k="vertical_anchor_point"/>
+                  <data_defined_properties>
+                    <Option type="Map">
+                      <Option type="QString" value="" name="name"/>
+                      <Option name="properties"/>
+                      <Option type="QString" value="collection" name="type"/>
+                    </Option>
+                  </data_defined_properties>
+                </layer>
+              </symbol>
+            </layer>
           </symbol>
         </symbols>
         <rotation/>
         <sizescale/>
       </renderer-v2>
       <customproperties>
-        <property key="dualview/previewExpressions">
-          <value>"name"</value>
-        </property>
+        <property key="dualview/previewExpressions" value="'[Please define preview text]'"/>
+        <property key="embeddedWidgets/count" value="0"/>
+        <property key="variableNames"/>
+        <property key="variableValues"/>
       </customproperties>
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
       <layerOpacity>1</layerOpacity>
+      <SingleCategoryDiagramRenderer attributeLegend="1" diagramType="Histogram">
+        <DiagramCategory lineSizeType="MM" diagramOrientation="Up" penAlpha="255" rotationOffset="270" backgroundColor="#ffffff" barWidth="5" backgroundAlpha="255" penColor="#000000" lineSizeScale="3x:0,0,0,0,0,0" enabled="0" sizeType="MM" penWidth="0" maxScaleDenominator="1e+08" minScaleDenominator="0" scaleDependency="Area" minimumSize="0" height="15" opacity="1" scaleBasedVisibility="0" width="15" labelPlacementMethod="XHeight" sizeScale="3x:0,0,0,0,0,0">
+          <fontProperties style="" description="MS Shell Dlg 2,7.8,-1,5,50,0,0,0,0,0"/>
+          <attribute field="" color="#000000" label=""/>
+        </DiagramCategory>
+      </SingleCategoryDiagramRenderer>
+      <DiagramLayerSettings zIndex="0" obstacle="0" dist="0" linePlacementFlags="18" placement="2" showAll="1" priority="0">
+        <properties>
+          <Option type="Map">
+            <Option type="QString" value="" name="name"/>
+            <Option name="properties"/>
+            <Option type="QString" value="collection" name="type"/>
+          </Option>
+        </properties>
+      </DiagramLayerSettings>
       <geometryOptions geometryPrecision="0" removeDuplicateNodes="0">
-        <activeChecks type="StringList">
-          <Option type="QString" value=""/>
-        </activeChecks>
+        <activeChecks/>
         <checkConfiguration/>
       </geometryOptions>
       <fieldConfiguration>
         <field name="name">
-          <editWidget type="">
+          <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
         <field name="description">
-          <editWidget type="">
+          <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
@@ -15341,16 +15120,18 @@ def my_form_open(dialog, layer, feature):
         <constraint exp="" desc="" field="description"/>
         <constraint exp="" desc="" field="WKT"/>
       </constraintExpressions>
-      <expressionfields/>
+      <expressionfields>
+        <field expression="left(geom_to_wkt($geometry), 55) || '...' || right(geom_to_wkt($geometry), 55)" length="0" precision="0" comment="" type="10" typeName="string" name="WKT" subType="0"/>
+      </expressionfields>
       <attributeactions>
         <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
       </attributeactions>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="&quot;WKT&quot;" sortOrder="0">
         <columns>
-          <column width="-1" type="field" hidden="0" name="name"/>
-          <column width="-1" type="field" hidden="0" name="description"/>
-          <column width="1165" type="field" hidden="0" name="WKT"/>
           <column width="-1" type="actions" hidden="1"/>
+          <column width="601" type="field" hidden="0" name="name"/>
+          <column width="392" type="field" hidden="0" name="description"/>
+          <column width="581" type="field" hidden="0" name="WKT"/>
         </columns>
       </attributetableconfig>
       <conditionalstyles>
@@ -15361,13 +15142,35 @@ def my_form_open(dialog, layer, feature):
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
       <editforminitfilepath></editforminitfilepath>
-      <editforminitcode><![CDATA[]]></editforminitcode>
+      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
+"""
+QGIS forms can have a Python function that is called when the form is
+opened.
+
+Use this function to add extra logic to your forms.
+
+Enter the name of the function in the "Python Init function"
+field.
+An example follows:
+"""
+from qgis.PyQt.QtWidgets import QWidget
+
+def my_form_open(dialog, layer, feature):
+	geom = feature.geometry()
+	control = dialog.findChild(QWidget, "MyLineEdit")
+]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
-      <editable/>
-      <labelOnTop/>
+      <editable>
+        <field editable="1" name="description"/>
+        <field editable="1" name="name"/>
+      </editable>
+      <labelOnTop>
+        <field labelOnTop="0" name="description"/>
+        <field labelOnTop="0" name="name"/>
+      </labelOnTop>
       <widgets/>
-      <previewExpression>"name"</previewExpression>
+      <previewExpression>'[Please define preview text]'</previewExpression>
       <mapTip></mapTip>
     </maplayer>
     <maplayer type="vector" simplifyAlgorithm="0" autoRefreshTime="0" autoRefreshEnabled="0" simplifyDrawingHints="1" minScale="1e+08" maxScale="0" simplifyDrawingTol="1" hasScaleBasedVisibilityFlag="0" refreshOnNotifyMessage="" simplifyMaxScale="1" styleCategories="AllStyleCategories" refreshOnNotifyEnabled="0" readOnly="0" wkbType="MultiLineStringZ" labelsEnabled="0" simplifyLocal="1" geometry="Line">
@@ -18117,7 +17920,6 @@ def my_form_open(dialog, layer, feature):
     <layer id="trincerone_Tracks_f6ff9340_63ab_45f1_8db6_86c8bc4ebc6d"/>
     <layer id="sierra_del_literno_Tracks_1b997f9c_e4cc_4ad3_bcd0_97c8245c18bb"/>
     <layer id="Updated_b7031ae0_80f6_44fe_a08e_c271074183cb"/>
-    <layer id="Updated_8414f7a0_41ea_4f8a_b2c9_98c7c2358aad"/>
     <layer id="POIs_b8a8ba28_1ffd_41bb_8715_1f5c19a767ae"/>
     <layer id="LeCime_c4a7059c_3df3_49a3_92df_4d5c20c0e1c3"/>
     <layer id="Salinen_36f729aa_f94d_41d6_9a5f_b1a5350cd22e"/>
