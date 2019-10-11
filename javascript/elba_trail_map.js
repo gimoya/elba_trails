@@ -113,7 +113,8 @@ var el = L.control.elevation({
 L.control.locate({
     strings: {
         title: "Show me my location!"
-    }
+    },
+	position: 'top-right'
 }).addTo(map);	
 		
 /*** Trail Style-Helper Functions ***/

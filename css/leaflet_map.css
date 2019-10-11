@@ -9,6 +9,11 @@ body{
 	padding-top:50px;
 }
 
+/* font awesome hack */
+.fa {
+    line-height: 30px!important;
+}
+
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -55,35 +60,20 @@ ul.nav.navbar-nav.navbar-right li a:hover {
 }
 
 /*** Control font size of title on small screens ***/
-
 @media screen and (max-width: 400px) {
   .navbar-default .navbar-brand {
     font-size: 1em;
   }
 }
 
-
-
-
 /*** Map popup Title***/
 
 .map-popup {
-  font-size: 1.25em;
+  font-size: 0.8em;
   font-weight: bold;
 }
 
 /*** popup contents ***/
-
-#topic {
-	font-weight: bold;
-	line-height:1.3!important;
-} 
-#topic-text {
-	margin-left:9em;
-	line-height:1.3!important;
-	white-space: nowrap;
-}
-
 .trailPopupClass .leaflet-popup-content-wrapper, .leaflet-popup-tip {
     box-shadow: none;
 }
@@ -92,20 +82,6 @@ ul.nav.navbar-nav.navbar-right li a:hover {
     padding: 5px;
     text-align: left;
     border-radius: 5px;
-}
-
-/*** Coords / Zoom Info Bar ***/
-
-#bar {
-	position:absolute;
-	z-index: 999;
-	bottom:0;
-	left:0;
-	margin: 4px;
-	padding: 4px;
-	background-color: rgba(255,255,255,0.9);
-	text-align:center;
-	font-family:'Arial';
 }
 
 /* 
