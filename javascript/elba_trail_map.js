@@ -32,8 +32,8 @@ if (trim(pw_prompt) == pw ) {
 var map = L.map('map', {
   center: [42.808660, 10.375],
   zoom: 12,
-  maxZoom: 17,
-  minZoom: 9,
+  maxZoom: 18,
+  minZoom: 11	,
   zoomControl: false,
   attributionControl: false
 });
