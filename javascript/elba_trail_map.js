@@ -106,6 +106,15 @@ var el = L.control.elevation({
 			collapsed: false,  //collapsed mode, show chart on click or mouseover
 			imperial: false    //display imperial units instead of metric
 	});
+	
+	
+// add location control
+
+L.control.locate({
+    strings: {
+        title: "Show me my location!"
+    }
+}).addTo(map);	
 		
 /*** Trail Style-Helper Functions ***/
 
